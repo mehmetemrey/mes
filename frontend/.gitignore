@@ -1,0 +1,188 @@
+# Dependencies
+/node_modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+.pnpm-debug.log*
+
+# Environment variables and configuration
+/.env.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# UmiJS specific files
+/.umirc.local.ts
+/config/config.local.ts
+/src/.umi
+/src/.umi-production
+/src/.umi-test
+.umi/
+.umi-production/
+.umi-test/
+
+# Build outputs
+/dist
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+
+# SWC cache
+.swc
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Temporary folders
+tmp/
+temp/
+
+# Security sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.pub
+secrets/
+private/
+ssl/
+certificates/
+
+# API keys and credentials
+api-keys*
+credentials*
+service-account*
+.credentials
+.secrets
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.brackets.json
+*.code-workspace
+
+# Testing
+/test/results/
+/test/coverage/
+.jest/
+
+# Cache directories
+.cache/
+.temp/
+.tmp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static/
+
+# Local development files
+local.*
+*.local
+
+# Source maps (in production)
+*.map
+
+# Bundle analyzer
+.analyzer/
+bundlesize.json
+
+# Performance monitoring
+.next/analyze/
+
+# Vercel
+.vercel
+
+# PWA files
+sw.js
+workbox-*.js
+
+# Mobile app builds
+android/
+ios/
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
