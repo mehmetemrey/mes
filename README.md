@@ -1,4 +1,4 @@
-# 🏭 MESSS - Manufacturing Execution System (Üretim Yürütme ve Takip Sistemi)
+# MES - Manufacturing Execution System (Üretim Yürütme ve Takip Sistemi)
 
 [![React](https://img.shields.io/badge/Frontend-React%2018%20%7C%20UmiJS-61dafb?logo=react&logoColor=black)](https://react.dev)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-339933?logo=node.js&logoColor=white)](https://nodejs.org)
@@ -7,22 +7,22 @@
 [![Python](https://img.shields.io/badge/Simulator-Python%203-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 
-Endüstri 4.0 ve akıllı fabrika standartlarına uygun; gerçek zamanlı makine telemetrisi, dinamik iş emri yaşam döngüsü, hiyerarşik departman yönetimi ve akıllı anomali tespiti sunan **Bilgisayar Mühendisliği Lisans Bitirme Projesi** kapsamında geliştirilmiş tam teşekküllü bir **Manufacturing Execution System (MES)** platformudur.
+Endüstri 4.0 ve akıllı fabrika standartlarına uygun; gerçek zamanlı makine telemetrisi, dinamik iş emri yaşam döngüsü, hiyerarşik departman yönetimi ve akıllı anomali tespiti sunan **Bilgisayar Mühendisliği Lisans Bitirme Projesi** kapsamında geliştirilmiş kapsamlı bir **Manufacturing Execution System (MES)** platformudur.
 
 ---
 
-## 🌟 Temel Fonksiyonel Yetenekler
+## Temel Fonksiyonel Yetenekler
 
-- **📡 Canlı IoT Telemetrisi:** Python tabanlı simülatör üzerinden endüstriyel makinelerin sıcaklık, RPM (devir), anlık güç tüketimi, çevrim süresi (cycle time), toplam üretim ve fire (rejected) sayaçlarının gerçek zamanlı yayını (WebSocket: `8765`).
-- **🚨 Akıllı Anomali ve Alarm Yönetimi:** Kritik sıcaklık artışları (>85°C), aşırı devir dalgalanmaları veya makine arıza durumlarında otomatik anomali sınıflandırması ve Socket.IO üzerinden tüm bağlı kullanıcılara anlık uyarı iletimi.
-- **📋 Uçtan Uca İş Emri Takibi:** Planlandı, Devam Ediyor, Duraklatıldı ve Tamamlandı evrelerine sahip iş emirlerinin duraklatma gerekçeleri, gecikme kayıtları ve operatör atamaları ile yönetimi.
-- **🏢 Fabrika Organizasyon Hiyerarşisi:** Departmanlar, üretim hatları (Production Lines) ve ardışık üretim aşamalarının (Production Stages) modellenmesi ve görselleştirilmesi.
-- **🔐 Granüler Yetkilendirme (RBAC):** CASL ve JWT tabanlı çok katmanlı rol ve izin mimarisi (Super Admin, Yönetici, Mühendis, Vardiya Amiri, Operatör).
-- **📊 Performans ve OEE Raporlaması:** Toplam Ekipman Etkinliği (OEE = Kullanılabilirlik × Performans × Kalite), vardiya analitiği ve PDF/dışa aktarım rapor desteği.
+- **Canlı IoT Telemetrisi:** Python tabanlı simülatör üzerinden endüstriyel makinelerin sıcaklık, RPM (devir), anlık güç tüketimi, çevrim süresi (cycle time), toplam üretim ve fire sayaçlarının gerçek zamanlı yayını (WebSocket: `8765`).
+- **Akıllı Anomali ve Alarm Yönetimi:** Kritik sıcaklık artışları (>85°C), aşırı devir dalgalanmaları veya makine arıza durumlarında otomatik anomali sınıflandırması ve Socket.IO üzerinden tüm bağlı istemcilere anlık uyarı iletimi.
+- **Uçtan Uca İş Emri Takibi:** Planlandı, Devam Ediyor, Duraklatıldı ve Tamamlandı evrelerine sahip iş emirlerinin duraklatma gerekçeleri, gecikme kayıtları ve operatör atamaları ile yönetimi.
+- **Fabrika Organizasyon Hiyerarşisi:** Departmanlar, üretim hatları (Production Lines) ve ardışık üretim aşamalarının (Production Stages) modellenmesi ve görselleştirilmesi.
+- **Granüler Yetkilendirme (RBAC):** CASL ve JWT tabanlı çok katmanlı rol ve izin mimarisi (Super Admin, Yönetici, Mühendis, Vardiya Amiri, Operatör).
+- **Performans ve OEE Raporlaması:** Toplam Ekipman Etkinliği (OEE = Kullanılabilirlik × Performans × Kalite), vardiya analitiği ve dışa aktarım rapor desteği.
 
 ---
 
-## 🏛️ Sistem Mimarisi ve Veri Akışı
+## Sistem Mimarisi ve Veri Akışı
 
 ```text
 ┌──────────────────────────┐     WebSocket (8765)      ┌───────────────────────────┐
@@ -49,7 +49,7 @@ Endüstri 4.0 ve akıllı fabrika standartlarına uygun; gerçek zamanlı makine
 
 ---
 
-## 🚀 Hızlı Başlangıç (Yerel Kurulum)
+## Kurulum ve Çalıştırma
 
 ### Sistem Gereksinimleri
 - **Node.js:** v18.x veya v20.x
@@ -58,9 +58,9 @@ Endüstri 4.0 ve akıllı fabrika standartlarına uygun; gerçek zamanlı makine
 
 ---
 
-### 1. Veritabanını Başlatın (MongoDB)
+### 1. Veritabanını Başlatma (MongoDB)
 
-Eğer Docker kullanıyorsanız:
+Docker ile:
 ```bash
 docker run -d -p 27017:27017 --name mes-mongo mongo:latest
 ```
@@ -93,7 +93,7 @@ npm run dev
 
 ---
 
-### 3. Makine Telemetri Simülatörünü Başlatın (Python)
+### 3. Makine Telemetri Simülatörünü Başlatma (Python)
 
 Ayrı bir terminalde:
 ```bash
@@ -104,7 +104,7 @@ pip install -r simulator/requirements.txt
 python3 simulator/simulator.py
 # (Alternatif olarak backend klasöründen: npm run simulator)
 ```
-> Simülatör WebSocket portu: `ws://localhost:8765`
+> Simülatör WebSocket adresi: `ws://localhost:8765`
 
 ---
 
@@ -124,7 +124,7 @@ npm run dev
 
 ---
 
-## 🔑 Örnek Test Kullanıcıları
+## Örnek Test Kullanıcıları
 
 `npm run seed` komutu çalıştırıldığında oluşturulan fabrika personeli:
 
@@ -139,7 +139,7 @@ npm run dev
 
 ---
 
-## 📡 REST API Endpoint Özeti
+## REST API Endpoint Özeti
 
 | Kategori | Metot & Rota | Açıklama | Yetki |
 | :--- | :--- | :--- | :--- |
@@ -158,7 +158,7 @@ npm run dev
 
 ---
 
-## ⚙️ Çevre Değişkenleri (`backend/.env`)
+## Çevre Değişkenleri (`backend/.env`)
 
 | Değişken | Varsayılan | Açıklama |
 | :--- | :--- | :--- |
@@ -172,7 +172,7 @@ npm run dev
 
 ---
 
-## 🧪 Kalite ve Doğrulama
+## Kalite ve Doğrulama
 
 - **TypeScript Tip Güvenliği:** Frontend için `npx tsc --noEmit` ile 0 tip hatası doğrulanmıştır.
 - **Üretim Paketi:** Frontend `npm run build` ile başarılı bir şekilde derlenmektedir.
@@ -180,6 +180,6 @@ npm run dev
 
 ---
 
-## 📄 Lisans
+## Lisans
 
 Bu proje [GPL-3.0](LICENSE) lisansı altında korunmaktadır.
